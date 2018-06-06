@@ -15,6 +15,6 @@
     "**/*.tns.ts",
     "**/*.android.ts",
     "**/*.ios.ts",
-    "app/main.aot.ts"
+    "app/main.ns.aot.ts"
   ]
 }
