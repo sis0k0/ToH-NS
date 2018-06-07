@@ -1,6 +1,6 @@
 import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { NativeScriptModule } from 'nativescript-angular/nativescript.module';
-import { HttpClientModule }    from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 
 import { AppRoutingModule } from './app.routing.tns';
@@ -21,7 +21,7 @@ import { InMemoryDataService } from './in-memory-data.service';
     NativeScriptModule,
     AppRoutingModule,
     HttpClientModule,
-    
+
     HttpClientInMemoryWebApiModule.forRoot(
       InMemoryDataService, { dataEncapsulation: false }
     )

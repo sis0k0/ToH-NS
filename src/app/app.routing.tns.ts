@@ -7,10 +7,10 @@ import { HeroesComponent } from './heroes/heroes.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/(dashboardTab:dashboard//heroesTab:heroes)', pathMatch: 'full' },
-  
+
   { path: 'dashboard', component: DashboardComponent, outlet: 'dashboardTab'  },
   // { path: 'dashboard/:id', component: PlayerDetailComponent, outlet: 'dashboardTab'  },
-  
+
   { path: 'heroes', component: HeroesComponent, outlet: 'heroesTab' },
   // { path: 'heroes/:id', component: TeamDetailComponent, outlet: 'heroesTab' },
 ];
