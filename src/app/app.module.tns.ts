@@ -1,9 +1,19 @@
 import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { NativeScriptModule } from 'nativescript-angular/nativescript.module';
+import { HttpClientModule }    from '@angular/common/http';
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+
 import { AppRoutingModule } from './app.routing.tns';
 import { AppComponent } from './app.component';
 
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { HeroesComponent } from './heroes/heroes.component';
+
+
 import { BarcelonaModule } from './barcelona/barcelona.module';
+import { HeroService } from './hero.service';
+import { MessageService } from './message.service';
+import { InMemoryDataService } from './in-memory-data.service';
 
 @NgModule({
   bootstrap: [
@@ -12,18 +22,25 @@ import { BarcelonaModule } from './barcelona/barcelona.module';
   imports: [
     NativeScriptModule,
     AppRoutingModule,
-    BarcelonaModule
+    BarcelonaModule,
+    HttpClientModule,
+    
+    HttpClientInMemoryWebApiModule.forRoot(
+      InMemoryDataService, { dataEncapsulation: false }
+    )
+
   ],
   declarations: [
-    AppComponent
+    AppComponent,
+    DashboardComponent,
+    HeroesComponent,
   ],
   providers: [
+    HeroService,
+    MessageService,
   ],
   schemas: [
     NO_ERRORS_SCHEMA
   ]
 })
-/*
-Pass your application module to the bootstrapModule function located in main.ts to start your app
-*/
 export class AppModule { }
