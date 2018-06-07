@@ -9,8 +9,6 @@ import { AppComponent } from './app.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { HeroesComponent } from './heroes/heroes.component';
 
-
-import { BarcelonaModule } from './barcelona/barcelona.module';
 import { HeroService } from './hero.service';
 import { MessageService } from './message.service';
 import { InMemoryDataService } from './in-memory-data.service';
@@ -22,7 +20,6 @@ import { InMemoryDataService } from './in-memory-data.service';
   imports: [
     NativeScriptModule,
     AppRoutingModule,
-    BarcelonaModule,
     HttpClientModule,
     
     HttpClientInMemoryWebApiModule.forRoot(
