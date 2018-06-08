@@ -1,1 +1,19 @@
-<Label text="Dashboard works!"></Label>
+<StackLayout>
+    <Label class="h1 text-center" text="Top Heroes"></Label>
+
+    <WrapLayout>
+      <Label [text]="hero.name"
+        *ngFor="let hero of heroes"
+        fontSize="30"
+        color="white"
+        width="300"
+        paddingTop="70"
+        height="200"
+        margin="30 15 15 30"
+        backgroundColor="#607D8B"
+        textAlignment="center"
+        borderRadius="5"
+        ></Label>
+    </WrapLayout>
+
+</StackLayout>

@@ -1,1 +1,11 @@
-<Label text="Heroes work!"></Label>
+<StackLayout>
+    <Label class="h1" text="My Heroes"></Label>
+
+    <ListView [items]="heroes" class="list-group">
+        <ng-template let-hero="item">
+            <Label [text]="hero.name"
+                class="list-group-item"></Label>
+        </ng-template>
+    </ListView>
+
+</StackLayout>
