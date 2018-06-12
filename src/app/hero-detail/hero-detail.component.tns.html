@@ -1,0 +1,8 @@
+<FlexboxLayout flexDirection="column" class="page">
+    <Label [text]="(hero.name | uppercase) + ' Details'" class="h2"></Label>
+    <Label [text]="'id: ' + hero.id"></Label>
+    <TextField [(ngModel)]="hero.name" hint="name" class="input input-rounded"></TextField>
+    <Button (tap)="save()" text="save" class="btn btn-primary"></Button>
+</FlexboxLayout>
+
+
